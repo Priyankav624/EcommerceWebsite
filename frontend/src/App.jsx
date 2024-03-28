@@ -1,12 +1,17 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
+import {Outlet} from 'react-router-dom'
+import Navigation from './pages/Auth/Navigation'
+import {ToastContainer} from 'react-toastify'  // main comp
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-     hoii 
+        <ToastContainer />
+        <Navigation />
+        <main className='py-3'>
+          <Outlet />
+        </main>
     </>
   )
 }
