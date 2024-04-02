@@ -8,11 +8,12 @@ import "./Navigation.css"
 import { useSelector, useDispatch } from 'react-redux'
 import { useLogoutMutation } from '../../redux/api/usersApiSlice'
 import { logout } from '../../redux/features/auth/authSlice'
-
+import FavoritesCount from '../Products/FavoritesCount'
 
 const Navigation = () => {
 
     const {userInfo} = useSelector(state => state.auth)
+    const {cartItems} = useSelector(state => state.cart)
     //sidebar
     const [ dropdownOpen , setDropdownOpen ] = useState(false)
     const [ showSidebar , setShowSidebar ] = useState(false)
@@ -48,12 +49,11 @@ const Navigation = () => {
         <div 
             style={{zIndex: 999}}   //to be in top
             className={`${showSidebar ? "hidden" : "flex"} xl:flex lg:flex md:hidden 
-                sm:hidden flex-col justify-between p-4 text-white bg-black w-[4%] 
+                sm:hidden flex-col justify-between p-4 text-white w-[4%] bg-black
                 hover:w-[15%] h-[100vh] fixed`}
             id="navigation-container"
         > 
-
-            <div className='flex flex-col bg-black  justify-center space-y-4'>
+            <div className='flex flex-col bg-black justify-center space-y-4'>
                 <Link 
                     to="/"
                     className='flex items-center bg-black transition-transform transform hover:translate-x-2'
@@ -74,6 +74,16 @@ const Navigation = () => {
                 >
                     <AiOutlineShoppingCart className='mr-2 bg-black mt-[3rem]' size={26} />
                     <span className='hidden nav-item-name bg-black mt-[3rem]'>CART</span>{" "}
+
+                    <div className="absolute top-9">
+                        {cartItems.length > 0 && (
+                        <span>
+                            <span className="px-1 py-0 text-sm text-white bg-pink-500 rounded-full">
+                            {cartItems.reduce((a, c) => a + c.qty, 0)}
+                            </span>
+                        </span>
+                        )}
+                    </div>
                 </Link>
                 <Link 
                     to="/favorite"
@@ -81,6 +91,7 @@ const Navigation = () => {
                 >
                     <FaHeart className='mr-2 bg-black mt-[3rem]' size={26} />
                     <span className='hidden bg-black nav-item-name mt-[3rem]'>FAVORITE</span>{" "}
+                    <FavoritesCount />
                 </Link>
             </div>
 
@@ -115,27 +126,27 @@ const Navigation = () => {
                             {userInfo.isAdmin && (
                                 <>
                                     <li>
-                                        <Link to ='/admin/dashboard' className='block px-6 py-2 hover:bg-gray-100'>
+                                        <Link to ='/admin/dashboard' className='block px-6 py-2 hover:bg-gray-500'>
                                             Dashboard
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to ='/admin/productlist' className='block px-6 py-2 hover:bg-gray-100'>
+                                        <Link to ='/admin/productlist' className='block px-6 py-2 hover:bg-gray-500'>
                                             Products
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to ='/admin/categorylist' className='block px-6 py-2 hover:bg-gray-100'>
+                                        <Link to ='/admin/categorylist' className='block px-6 py-2 hover:bg-gray-500'>
                                             Category
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to ='/admin/orderlist' className='block px-6 py-2 hover:bg-gray-100'>
+                                        <Link to ='/admin/orderlist' className='block px-6 py-2 hover:bg-gray-500'>
                                             Orders
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to ='/admin/userlist' className='block px-6 py-2 hover:bg-gray-100'>
+                                        <Link to ='/admin/userlist' className='block px-6 py-2 hover:bg-gray-500'>
                                             Users
                                         </Link>
                                     </li>
@@ -150,7 +161,7 @@ const Navigation = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to ='/logout' className='block px-6 py-2 hover:bg-gray-100' onClick={logoutHandler}>
+                                <Link to ='/logout' className='block px-6 py-2 hover:bg-gray-500' onClick={logoutHandler}>
                                     Logout                                    
                                 </Link>
                             </li>
@@ -158,7 +169,7 @@ const Navigation = () => {
                 )}
             </div>
             {!userInfo && (
-                    <ul>
+                <ul>
                     <li>
                     <Link 
                         to="/login"
@@ -179,8 +190,6 @@ const Navigation = () => {
                     </li>
                 </ul>
               )}
-
-            
         </div>
     )
 }

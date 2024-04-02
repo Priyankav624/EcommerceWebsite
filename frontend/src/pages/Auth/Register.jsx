@@ -62,7 +62,7 @@ const Register = () => {
                         <input 
                             type='text'
                             id='name'
-                            className='ml-1 m-2 p-2 border rounded w-full'
+                            className='ml-1 m-2 p-2 bg-black text-white border rounded w-full'
                             placeholder='Enter name'
                             value={username}
                             onChange={(e) => setUserName(e.target.value)}
@@ -75,7 +75,7 @@ const Register = () => {
                         <input 
                             type='email'
                             id='email'
-                            className='ml-1 m-2 p-2 border rounded w-full'
+                            className='ml-1 m-2 bg-black text-white p-2 border rounded w-full'
                             placeholder='Enter email'
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
@@ -88,7 +88,7 @@ const Register = () => {
                         <input 
                             type='password'
                             id='password'
-                            className='ml-1 m-2 p-2 border rounded w-full'
+                            className='ml-1 m-2 p-2 border bg-black text-white rounded w-full'
                             placeholder='Enter password'
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
@@ -100,7 +100,7 @@ const Register = () => {
                         <input 
                             type='password'
                             id='confirmpassword'
-                            className='ml-1 m-2 p-2 border rounded w-full'
+                            className='ml-1 m-2 p-2 bg-black text-white border rounded w-full'
                             placeholder='Enter confirm password'
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}

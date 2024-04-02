@@ -55,7 +55,7 @@ const Profile = () => {
                             </label>
                             <input 
                                 type='text'
-                                className='form-input p-4 border rounded-sm w-full'
+                                className='form-input p-4 border bg-black text-white rounded-sm w-full'
                                 placeholder='Enter name'
                                 value={username}
                                 onChange={(e) => setUserName(e.target.value)}
@@ -67,7 +67,7 @@ const Profile = () => {
                             </label>
                             <input 
                                 type='email'
-                                className='form-input p-4 border rounded-sm w-full'
+                                className='form-input p-4 bg-black text-white border rounded-sm w-full'
                                 placeholder='Enter email'
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -79,7 +79,7 @@ const Profile = () => {
                             </label>
                             <input 
                                 type='password'
-                                className='form-input p-4 border rounded-sm w-full'
+                                className='form-input p-4 bg-black text-white border rounded-sm w-full'
                                 placeholder='Enter password'
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
@@ -91,7 +91,7 @@ const Profile = () => {
                             </label>
                             <input 
                                 type='password'
-                                className='form-input p-4 border rounded-sm w-full'
+                                className='form-input p-4 border bg-black text-white rounded-sm w-full'
                                 placeholder='Enter confirm password'
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}

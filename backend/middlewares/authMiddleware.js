@@ -9,7 +9,6 @@ const authenticate = asyncHandler(async (req, res, next) => {
 
     if(token) {
         try{
-
             const decoded = jwt.verify(token, process.env.JWT_SECRET)
             req.user = await User.findById(decoded.userId).select("-password")
             next();           //to go to other middleware
@@ -31,6 +30,6 @@ const authorizeAdmin = (req, res, next) => {
     } else {
         res.status(401).send("Not authorized as an admin. ")
     }
-}
+;}
 
 export { authenticate, authorizeAdmin};
