@@ -1,5 +1,6 @@
 import asyncHandler from "../middlewares/asyncHandler.js";
 import Product from "../models/productModel.js";
+import Category from "../models/categoryModel.js"
 
 const addProduct = asyncHandler(async (req, res) => {
   try {
@@ -78,23 +79,31 @@ const removeProduct = asyncHandler(async (req, res) => {
 const fetchProducts = asyncHandler(async (req, res) => {
   try {
     const pageSize = 6;
+    const keyword = req.query.keyword;
 
-    const keyword = req.query.keyword
-      ? {
-          name: {
-            $regex: req.query.keyword,
-            $options: "i",
-          },
+    let products;
+    if (keyword) {
+      // Search by product name
+      const productNameRegex = new RegExp(keyword, 'i');
+      products = await Product.find({ name: productNameRegex }).limit(pageSize);
+
+      // If no products found by name, search by category
+      if (products.length === 0) {
+        const category = await Category.findOne({ name: productNameRegex });
+        if (category) {
+          // Fetch products belonging to the matched category
+          products = await Product.find({ category: category._id }).limit(pageSize);
         }
-      : {};
-
-    const count = await Product.countDocuments({ ...keyword });
-    const products = await Product.find({ ...keyword }).limit(pageSize);
+      }
+    } else {
+      // Fetch all products if no keyword provided
+      products = await Product.find({}).limit(pageSize);
+    }
 
     res.json({
       products,
       page: 1,
-      pages: Math.ceil(count / pageSize),
+      pages: 1, // Assuming we're fetching all products without pagination for simplicity
       hasMore: false,
     });
   } catch (error) {
@@ -102,6 +111,7 @@ const fetchProducts = asyncHandler(async (req, res) => {
     res.status(500).json({ error: "Server Error" });
   }
 });
+
 
 const fetchProductById = asyncHandler(async (req, res) => {
   try {
@@ -122,7 +132,7 @@ const fetchAllProducts = asyncHandler(async (req, res) => {
   try {
     const products = await Product.find({})
       .populate("category")
-      .limit(12)
+      .limit(100)
       .sort({ createAt: -1 });
 
     res.json(products);

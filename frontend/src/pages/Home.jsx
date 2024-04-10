@@ -4,7 +4,7 @@ import Loader from'../components/Loader'
 import Message from '../components/Message'
 import Header from "../components/Header"
 import Product from "./Products/Product"
-
+import NavHead from "./NavHead"
 
 const Home = () => {
     const {keyword } =useParams()
@@ -12,6 +12,8 @@ const Home = () => {
 
     return (
         <>
+        <NavHead />
+    
             {!keyword ? <Header/ > : null}
             {isLoading? (<Loader />) : isError ? (<Message variant='danger'>
                 {isError?.data.message || isError.error}

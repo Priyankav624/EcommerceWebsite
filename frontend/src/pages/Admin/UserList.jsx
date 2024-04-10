@@ -53,7 +53,7 @@ const UserList = () => {
       };
 
     return (
-        <div className="p-4">
+        <div className="p-4 " style={{marginBottom:"200px"}}>
             <h1 className="text-2xl font-semibold mb-4"></h1>
             {isLoading ? (
                 <Loader />

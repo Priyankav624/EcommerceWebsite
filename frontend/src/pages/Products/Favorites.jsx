@@ -6,7 +6,7 @@ const Favorites = () => {
   const favorites = useSelector(selectFavoriteProduct);  // getting from localstorage fav
 
   return (
-    <div className="ml-[10rem]">
+    <div className="ml-[10rem] " style={{marginBottom:"450px"}}>
       <h1 className="text-lg font-bold ml-[3rem] mt-[3rem]">
         FAVORITE PRODUCTS
       </h1>

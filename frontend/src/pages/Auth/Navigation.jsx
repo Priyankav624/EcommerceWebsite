@@ -22,13 +22,13 @@ const Navigation = () => {
         setDropdownOpen(!dropdownOpen)
     }
 
-    const toogleSidebar = () => {
-        setShowSidebar(!showSidebar)
-    }
+    // const toogleSidebar = () => {
+    //     setShowSidebar(!showSidebar)
+    // }
 
-    const closeSidebar = () => {
-        setShowSidebar(false)
-    }
+    // const closeSidebar = () => {
+    //     setShowSidebar(false)
+    // }
 
     const dispatch = useDispatch()
     const navigate = useNavigate()

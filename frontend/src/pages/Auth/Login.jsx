@@ -23,6 +23,7 @@ const Login = () => {
 
     useEffect(() => {
         if(userInfo) {        //already have redirect
+            console.log(userInfo)
             navigate(redirect);
         }
      }, [navigate, redirect, userInfo]); //dependency error
