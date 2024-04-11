@@ -1,13 +1,13 @@
 .search{
     flex:1;
-    height: 6dvh;
+    height: 4vh;
     border-top-left-radius: 2px;
     border-end-start-radius: 2px;
     border: 1px solid rgb(236, 230, 230);
     font-size: 16px;
     width: 900px;
     margin-bottom: 50px;
-    margin-top: 40px;
+    margin-top: 60px;
     background-color: black;
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
     color: white;
@@ -21,7 +21,7 @@
 .icons1{
     flex:1;
     width: 64px;
-    height: 57px;  
+    height: 39px;  
     border-end-end-radius: 2px;
     border-start-end-radius: 2px;
     border: 1px solid rgb(241, 238, 238);
@@ -29,8 +29,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -6px;
-    margin-bottom: 4px;
+    margin-top: 12px;
+    margin-bottom: 3px;
+}
+
+.icons1:hover{
+    background-color: rgb(224, 131, 146);
 }
 
 .center{
@@ -44,14 +48,13 @@
 
 .header{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    position:fixed;
-    height:90px;
+    justify-content: center;
+    position: fixed;
+    height:120px;
     top:0;
     right: 0;
     left: 0;
-    background-color:black;
+    background-color: rgb(64, 82, 64);
     padding-bottom: 1px;
     z-index: 100;
 }
@@ -64,8 +67,8 @@
 }
 
 .icon1{
-    height:60px;
-    width: 150px;
+    margin-top: 4px ;
+    height:100px;
+    width: 200px;
     object-fit: contain;
-    margin-left: -150px;
 }

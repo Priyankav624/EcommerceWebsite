@@ -16,7 +16,7 @@ const Search = () => {
   }, [keyword]);
 
   return (
-    <div style={{marginLeft:"100px"}}>
+    <div style={{marginLeft:"100px", marginBottom:"500px"}}>
       <h1>Search Results for "{keyword}"</h1>
       {isLoading && <Loader />}
       {isError && <Message variant="danger">{isError.error}</Message>}

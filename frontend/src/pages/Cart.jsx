@@ -24,7 +24,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="container flex justify-around items-start flex wrap mx-auto mt-8" style={{marginBottom:"500px"}}>
+      <div className="container flex justify-around items-start flex wrap mx-auto mt-8" style={{marginBottom:"900px"}}>
         {cartItems.length === 0 ? (
           <div>
             Your cart is empty <Link to="/shop">Go To Shop</Link>

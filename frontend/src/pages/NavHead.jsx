@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import { FaSearch } from "react-icons/fa";
-import logo from "../../images/logo.jpg"
+import logo from "../../images/logo.png"
 
 const NavHead = () => {
   const [searchTerm, setSearchTerm] = useState('');

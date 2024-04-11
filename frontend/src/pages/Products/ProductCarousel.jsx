@@ -1,4 +1,4 @@
-import { useGetTopProductsQuery } from "../../redux/api/productApiSlice";
+import { useAllProductsQuery } from "../../redux/api/productApiSlice";
 import Message from "../../components/Message";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 
 const ProductCarousel = () => {
-  const { data: products, isLoading, error } = useGetTopProductsQuery();
+  const { data: products, isLoading, error } = useAllProductsQuery();
 
   const settings = {
     dots: false,
@@ -23,7 +23,7 @@ const ProductCarousel = () => {
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
   };
 
   return (
