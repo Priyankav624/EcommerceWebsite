@@ -21,7 +21,7 @@
 .icons1{
     flex:1;
     width: 64px;
-    height: 39px;  
+    height: 38px;  
     border-end-end-radius: 2px;
     border-start-end-radius: 2px;
     border: 1px solid rgb(241, 238, 238);
@@ -50,11 +50,12 @@
     display: flex;
     justify-content: center;
     position: fixed;
-    height:120px;
+    height:80px;
     top:0;
     right: 0;
     left: 0;
     background-color: rgb(64, 82, 64);
+    background-color: black;
     padding-bottom: 1px;
     z-index: 100;
 }
@@ -66,9 +67,3 @@
     margin-right:30px;
 }
 
-.icon1{
-    margin-top: 4px ;
-    height:100px;
-    width: 200px;
-    object-fit: contain;
-}

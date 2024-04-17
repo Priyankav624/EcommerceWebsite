@@ -13,13 +13,13 @@ const Home = () => {
     return (
         <>
         <NavHead />
-    
             {!keyword ? <Header/ > : null}
             {isLoading? (<Loader />) : isError ? (<Message variant='danger'>
                 {isError?.data.message || isError.error}
             </Message>) : (
                 <> 
-                    <div className="flex justify-between items-center">
+
+                    <div style={{marginTop:"-100px"}} className="flex justify-between items-center">
                         <h1 className="ml-[20rem] mt-[10rem] text-[3rem]">
                             Special Products
                         </h1>
@@ -42,6 +42,15 @@ const Home = () => {
                     </div>
                 </>
             )}
+              <div style={{ marginLeft:"1800px", marginTop:"50px", marginBottom:"-100px"}}>
+                    <Link to="https://landbot.online/v3/H-2193145-LC2XPNFLI6Y25JOR/index.html">
+                    <img 
+                        style={{height:"100px", width:"100px"}}
+                        src='https://imgs.search.brave.com/XX6NSg0_GDh4ftGvffgIZeGFmhAEkn92xGK0gjWdxJE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mcmVl/c3ZnLm9yZy9pbWcv/MTUzODI5ODgyMi5w/bmc' alt='' ></img>
+                        <h3 style={{marginLeft:"20px"}}>Chatbot</h3>
+                    </Link>
+
+                </div>
         </>
     )
 }

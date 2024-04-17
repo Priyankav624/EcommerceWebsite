@@ -14,7 +14,7 @@ const Footer = () => {
     <>
       <div style={{ marginTop: "200px", display: "grid", color: "", border: "1px solid black",  backgroundColor: "rgb(64, 82, 64)", gridTemplateColumns: "1fr 1fr 1fr", padding: "10px" }}>
         <Container style={{ marginLeft: "200px", marginTop: "5px" }}>
-          <Typography style={{ marginLeft: "180px" }} variant='h1'>Eva</Typography>
+          <Typography style={{ marginLeft: "10px" }} variant='h1'>Eva</Typography>
         </Container>
 
         <Container style={{ textAlign: "center" }}>
@@ -63,7 +63,7 @@ const Footer = () => {
           {isOpen && (
             <div style={{marginTop:"-20px"}} className="absolute bg-gray-400 text-black rounded-md shadow-md right-60 w-20">
               <a href="/register" className="block px-4 py-2 text-sm hover:bg-gray-800">Register</a>
-              <a href="/home" className="block px-4 py-2 text-sm hover:bg-gray-800">Home</a>
+              <a href="/" className="block px-4 py-2 text-sm hover:bg-gray-800">Home</a>
               <a href="/shop" className="block px-4 py-2 text-sm hover:bg-gray-800">Shop</a>
             </div>
           )}

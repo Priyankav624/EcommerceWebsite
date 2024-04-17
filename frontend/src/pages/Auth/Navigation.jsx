@@ -9,6 +9,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useLogoutMutation } from '../../redux/api/usersApiSlice'
 import { logout } from '../../redux/features/auth/authSlice'
 import FavoritesCount from '../Products/FavoritesCount'
+import logo from "../../../images/logo.png"
+
 
 const Navigation = () => {
 
@@ -45,7 +47,15 @@ const Navigation = () => {
                 hover:w-[15%] h-[100vh] fixed`}
             id="navigation-container"
         > 
+        
             <div className='flex flex-col justify-center space-y-4'>
+            <Link 
+                to="/"
+                className='flex items-center justify-center transition-transform transform hover:translate-x-2'
+            >
+                <img  src={logo} alt="" className='logo mr-2' /> 
+                {" "}
+            </Link> 
                 <Link 
                     to="/"
                     className='flex items-center transition-transform transform hover:translate-x-2'
@@ -143,7 +153,9 @@ const Navigation = () => {
                                         </Link>
                                     </li>
 
+
                                 </>
+                            
                             )} 
 
                             {/*  if user is not admin */}
