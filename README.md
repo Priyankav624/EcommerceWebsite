@@ -1,7 +1,7 @@
 🛒 E-Commerce Website (e-commerce-app)
 A full-stack e-commerce web application built with Mern stack deployed on AWS EC2.
 
-🔧 Tech Stack
+Tech Stack
 Frontend: React.js, Tailwind CSS
 Backend: Node.js, Express.js
 Database: MongoDB (Mongoose)
@@ -93,6 +93,17 @@ After delivered
 
 ![image](https://github.com/user-attachments/assets/91443ebc-ec64-480e-bad3-b9d98acae57b)
 
+Mongodb:
+
+![image](https://github.com/user-attachments/assets/ab595030-60a1-4774-92e3-ffa09aef5e1f)
+
+![image](https://github.com/user-attachments/assets/cc29a9fb-81fb-4ec3-bbeb-2026e28413c4)
+
+![image](https://github.com/user-attachments/assets/04fab38d-977d-4f25-abb7-b09456dd6a5d)
+
+
+
+
 
 ## How to Run
 
@@ -100,16 +111,23 @@ After delivered
 
 git clone https://github.com/Priyankav624/EcommerceWebsite.git 
 
-2) cd EcommerceWebsite
+2) Navigate to the Project Directory
+
+cd EcommerceWebsite
 
 3) Backend
-cd backend
-npm install
 
-4) Frontend
+cd backend
+
+Install Dependencies - npm install
+
+5) Frontend
+
 cd frontend
-npm install
-npm run dev
+
+Install Dependencies - npm install
+
+Run the Application - npm run dev
 
 
 
