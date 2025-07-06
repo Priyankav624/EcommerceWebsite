@@ -121,7 +121,7 @@ cd backend
 
 Install Dependencies - npm install
 
-5) Frontend
+4) Frontend
 
 cd frontend
 
