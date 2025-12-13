@@ -1,26 +1,49 @@
-🛒 E-Commerce Website (e-commerce-app)
-A full-stack e-commerce web application built with Mern stack deployed on AWS EC2.
+# 🛒 E-Commerce Website (e-commerce-app)
+A full-stack e-commerce web application built using the **MERN** stack and deployed on **AWS EC2**.
 
-Tech Stack
-Frontend: React.js, Tailwind CSS
-Backend: Node.js, Express.js
-Database: MongoDB (Mongoose)
+---
 
-Authentication: JWT with Role-based Access Control
-Payments: PayPal Developer Sandbox API
-Cloud: AWS EC2
-Others: GitHub, Postman
+## Tech Stack
 
+### **Frontend**
+- React.js  
+- Tailwind CSS  
 
-Features:
-- User Registration & Login with JWT Auth  
-- Role-based Access Control (User/Admin)  
+### **Backend**
+- Node.js  
+- Express.js  
+
+### **Database**
+- MongoDB (Mongoose)
+
+### **Authentication**
+- JWT Authentication  
+- Role-Based Access Control (User/Admin)
+
+### **Payments**
+- PayPal Developer Sandbox API
+
+### **Cloud / Deployment**
+- AWS EC2  
+
+### **Tools**
+- GitHub  
+- Postman  
+
+---
+
+## Features
+- User Registration & Login with JWT Authentication  
+- Role-Based Access Control (User/Admin)  
 - Add to Cart, Favourites, Filter Products, Checkout Flow  
 - Admin Dashboard with Product Management & Order Tracking  
 - Responsive UI for both desktop and mobile  
 - Secure Payment Gateway via PayPal API  
 - Real-time updates and validations  
 - Update Profile, Shipping Info, and Order History  
+
+---
+
 
 
 Login Page:
@@ -103,34 +126,42 @@ Mongodb:
 
 
 
+---
 
 
-## How to Run
 
-1. Clone the Repository
+## 📁 Clone the Repository
+```bash
+git clone https://github.com/Priyankav624/EcommerceWebsite.git
+```
 
-git clone https://github.com/Priyankav624/EcommerceWebsite.git 
+---
 
-2) Navigate to the Project Directory
-
+## 📂 Navigate to the Project Directory
+```bash
 cd EcommerceWebsite
+```
 
-3) Backend
+---
 
+## 🛠 Backend Setup
+```bash
 cd backend
+npm install
+```
 
-Install Dependencies - npm install
+---
 
-4) Frontend
-
+## 🎨 Frontend Setup
+```bash
 cd frontend
+npm install
+```
 
-Install Dependencies - npm install
+---
 
-Run the Application - npm run dev
-
-
-
-
-
+## ▶️ Run the Application
+```bash
+npm run dev
+```
 
